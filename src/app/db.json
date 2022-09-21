@@ -162,18 +162,6 @@
       "Quantity": 3,
       "productId": 1,
       "id": 2
-    },
-    {
-      "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
-      "Description": "temp",
-      "Title": "temp",
-      "MRP": "1222",
-      "Discount": "10%",
-      "Price": 1111,
-      "type": "temp",
-      "Quantity": 1,
-      "productId": 4,
-      "id": 3
     }
   ],
   "OrderedProducts": [

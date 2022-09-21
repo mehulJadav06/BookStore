@@ -29,7 +29,7 @@ export class CartComponent implements OnInit,OnDestroy {
   initProduct(){
     this.subscription = this.data.currentMessage.subscribe(message => {
       this.message = message
-      this.http.get<any>("http://localhost:3000/cartProducts")
+      this.data.get("cartProducts")
         .subscribe(res => {
           this.products = res;
           this.ProductType = message == '' ? 'All' : message;
@@ -52,7 +52,7 @@ export class CartComponent implements OnInit,OnDestroy {
       });
   }
   remove(id:any){
-      this.http.delete("http://localhost:3000/cartProducts/"+id).subscribe(data => {
+      this.data.delete("cartProducts",id).subscribe(data => {
         this.initProduct();
       });
   }

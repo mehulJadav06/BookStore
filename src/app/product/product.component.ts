@@ -19,7 +19,7 @@ export class ProductComponent implements OnInit {
   message: string | undefined;
   subscription: Subscription = new Subscription;
   public ProductType: any;
-  constructor(private http : HttpClient,private router:Router, private data: SharedServiceService) { }
+  constructor(private http : HttpClient,private router:Router, private service: SharedServiceService) { }
 
   ngOnInit(): void {
     if(localStorage.getItem("isAdmin")!="true"){
@@ -63,10 +63,10 @@ export class ProductComponent implements OnInit {
     });
   }
   initAgain(){
-    this.http.get<any>("http://localhost:3000/Products")
+    this.service.get('Products')
     .subscribe(res=>{
       this.ds = res;
-      this.dataSource = res;
+      this.dataSource = new MatTableDataSource(res);
       this.dataSource.filter = this.filterValue.trim().toLowerCase();
     });
   }
