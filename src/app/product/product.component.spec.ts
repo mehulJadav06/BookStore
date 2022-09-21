@@ -14,7 +14,7 @@ describe('ProductComponent', () => {
   let fixture: ComponentFixture<ProductComponent>;
   let http: HttpClient;
   let router: Router;
-  let data: SharedServiceService;
+  let service: SharedServiceService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -64,6 +64,6 @@ describe('ProductComponent', () => {
     });
     searchBox.triggerEventHandler('keyup', event);
     fixture.detectChanges();
-    expect(component.applyFilter)
+    expect(component.applyFilter).toHaveBeenCalled();
   })
 });

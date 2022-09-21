@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormsModule } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { SharedServiceService } from '../sharedService/shared-service.service';
 @Component({
@@ -29,7 +28,11 @@ export class CartComponent implements OnInit,OnDestroy {
   initProduct(){
     this.subscription = this.data.currentMessage.subscribe(message => {
       this.message = message
-      this.data.get("cartProducts")
+      this.getProducts(message);
+      });
+  }
+  getProducts(message:string){
+    this.data.get("cartProducts")
         .subscribe(res => {
           this.products = res;
           this.ProductType = message == '' ? 'All' : message;
@@ -49,7 +52,6 @@ export class CartComponent implements OnInit,OnDestroy {
             console.log(this.placeOrderDisabled)
           }
         });
-      });
   }
   remove(id:any){
       this.data.delete("cartProducts",id).subscribe(data => {
