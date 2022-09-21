@@ -11,9 +11,6 @@ import { CartComponent } from './cart.component';
 describe('CartComponent', () => {
   let component: CartComponent;
   let fixture: ComponentFixture<CartComponent>;
-  let http: HttpClient;
-  let router: Router;
-  let service: SharedServiceService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -58,4 +55,5 @@ describe('CartComponent', () => {
     component.getProducts('Dogs');
     expect(component.ProductType).toEqual('Dogs');
   })
+
 });

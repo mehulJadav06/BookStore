@@ -12,9 +12,6 @@ import { By } from '@angular/platform-browser';
 describe('ProductComponent', () => {
   let component: ProductComponent;
   let fixture: ComponentFixture<ProductComponent>;
-  let http: HttpClient;
-  let router: Router;
-  let service: SharedServiceService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
