@@ -1,0 +1,59 @@
+.example-card {
+    margin:10px 250px;
+  }
+  .itemImage{
+    max-width: 200px;
+    float: left;
+  }
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  .Product{
+      max-width: 200px;
+      margin: 10px;
+  }
+  .leftContent{
+    float: left;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+  .centerContent{
+      float: left;
+      width: 50%;
+      padding-left: 10%;
+  }
+  .rightContent{
+      width: 30%;
+      padding-left: 10%;
+  }
+  .title{
+    text-align: center;
+    margin: 20px 300px;
+    font-size: 35px;
+    font-weight: 500;
+  }
+  .item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .mat-card{
+      width: auto;
+      height: 100%;
+  }
+  .red-color{
+      color: red;
+  }
+  .QuantityInput{
+      width: 30px;
+      border: none;
+      color: green;
+  }
+  .po{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  }

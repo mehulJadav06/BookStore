@@ -1,0 +1,37 @@
+<div>
+    <div class="title">
+        Edit Product
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="card">
+                <form [formGroup]="EditProductForm" *ngIf="EditProductForm" (ngSubmit)="edit()">
+                    <div class="mb-3">
+                        <label for="Title" class="form-label"> Title </label>
+                        <input formControlName="Title" required type="text" class="form-control" id="Title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Description" class="form-label">Description</label>
+                        <input formControlName="Description" required type="text" class="form-control" id="Description">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="MRP" class="form-label"> MRP </label>
+                        <input formControlName="MRP" required type="text" class="form-control" id="MRP">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Price" class="form-label">Price</label>
+                        <input formControlName="Price" required type="text" class="form-control" id="Price">
+                    </div>
+
+                    <button type="submit" [disabled]="!EditProductForm.valid" class="btn btn-primary m-2">Update</button>
+                    <button class="btn btn-primary m-2" (click)="cancel()">Cancel</button>
+                  </form>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

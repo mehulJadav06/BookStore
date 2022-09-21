@@ -1,0 +1,22 @@
+
+<form class="example-form">
+    <div class="navigation">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Search any Items</mat-label>
+      <input type="text"
+             placeholder="Like Dogs"
+             aria-label="Items"
+             matInput
+             [formControl]="myControl"
+             [matAutocomplete]="auto">
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
+    <button mat-raised-button (click)="search()" class="btn" color="accent">Search</button>
+    <button mat-raised-button (click)="handleClear()" class="btn" color="warn">Cancel</button>
+    </div>
+  </form>

@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Register</h1>
+                </div>
+                <form [formGroup]="registerForm" (ngSubmit)="register()">
+                    <div class="mb-3">
+                        <label for="FirstName" class="form-label">First Name</label>
+                        <input formControlName="firstName" required type="text" class="form-control" id="FirstName">
+                        <div class="errorValidators" *ngIf="registerForm.controls['firstName'].errors && registerForm.controls['firstName'].hasError('required')">
+                            FirstName is required.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="LastName" class="form-label">Last Name</label>
+                        <input formControlName="lastName" required type="text" class="form-control" id="LastName">
+                        <div class="errorValidators" *ngIf="registerForm.controls['lastName'].errors && registerForm.controls['lastName'].hasError('required')">
+                            LastName is required.
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <label for="Email" class="form-label">Email address</label>
+                      <input formControlName="email" required type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                      <div class="errorValidators" *ngIf="registerForm.controls['email'].errors && registerForm.controls['email'].hasError('required')">
+                        Email is required.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="Password" class="form-label">Password</label>
+                      <input formControlName="password" type="password" class="form-control" id="Password">
+                      <div class="errorValidators" *ngIf="registerForm.controls['password'].errors && registerForm.controls['password'].hasError('required')">
+                        Password is required.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ConfirmPassword" class="form-label">Confirm Password</label>
+                        <input formControlName="confirmPassword" type="password" class="form-control" id="ConfirmPassword">
+                        <div class="errorValidators" *ngIf="registerForm.controls['confirmPassword'].errors && registerForm.controls['confirmPassword'].hasError('required')">
+                            Confirm Password is required.
+                            </div>
+                      </div>
+                    <button type="submit" [disabled]="!registerForm.valid" class="btn btn-primary m-2">Register</button>
+                    <button routerLink="/login" class="btn btn-primary m-2">Login</button>
+                  </form>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

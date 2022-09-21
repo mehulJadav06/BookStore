@@ -1,0 +1,35 @@
+header h1 {
+    padding-top: 50px;
+    font-size: 70px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #3c6d9a, #b393d3);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    height: 120px;
+  }
+  header h2 {
+    padding-top: 10px;
+    font-size: 30px;
+    font-weight: 400;
+    background-image: linear-gradient(to left, #58f4ba, #5a9b62);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  mat-card{
+      margin :20px;
+  }
+  .price{
+    background-color: #b5e8d5;
+    color: #36c646;
+  }
+  .realPrice{
+      color: black !important;
+  }
+  .reviews{
+      padding: 30px;
+  }
+  .Reviews-mat-card{
+      height: max-content;
+  }

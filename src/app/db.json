@@ -1,0 +1,231 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "registeredUsers": [
+    {
+      "firstName": "zdfg",
+      "lastName": "asdfa",
+      "email": "asdf@sdf.casd",
+      "password": "asdfa",
+      "confirmPassword": "asdfasd",
+      "id": 1,
+      "isAdmin": true
+    },
+    {
+      "firstName": "asdf",
+      "lastName": "asdf",
+      "email": "asdf@sdf.cs",
+      "password": "asdf",
+      "confirmPassword": "asdf",
+      "id": 2,
+      "isAdmin": true
+    },
+    {
+      "firstName": "asdf",
+      "lastName": "asdf",
+      "email": "asdf@sdf.cs",
+      "password": "asdf",
+      "confirmPassword": "asdf",
+      "id": 3,
+      "isAdmin": true
+    },
+    {
+      "firstName": "sadf",
+      "lastName": "sdf",
+      "email": "sdfg",
+      "password": "sdfg",
+      "confirmPassword": "",
+      "id": 4,
+      "isAdmin": false
+    },
+    {
+      "firstName": "ubhu",
+      "lastName": "knkjn",
+      "email": "oni",
+      "password": "ook",
+      "confirmPassword": "",
+      "id": 5,
+      "isAdmin": false
+    },
+    {
+      "firstName": "asdf",
+      "lastName": "asdf",
+      "email": "sdf@asd.sd",
+      "password": "bhbh",
+      "confirmPassword": "hbhb",
+      "id": 6,
+      "isAdmin": false
+    },
+    {
+      "firstName": "Mehul",
+      "lastName": "Jadav",
+      "email": "asdf@sdf.cs",
+      "password": "asdf",
+      "confirmPassword": "asdf",
+      "id": 7,
+      "isAdmin": false
+    },
+    {
+      "firstName": "asdf",
+      "lastName": "asdf",
+      "email": "asdf@sdf.css",
+      "password": "asdf",
+      "confirmPassword": "asdf",
+      "id": 9,
+      "isAdmin": false
+    },
+    {
+      "firstName": "asdf",
+      "lastName": "asdf",
+      "email": "asdf@sdf.cssss",
+      "password": "asdf",
+      "confirmPassword": "asdf",
+      "isAdmin": "false",
+      "id": 10
+    }
+  ],
+  "Products": [
+    {
+      "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
+      "Title": "Shiba Inu",
+      "Price": "802",
+      "MRP": "1001",
+      "Description": "asdfa",
+      "Discount": "20%",
+      "id": 1,
+      "type": "Dogs"
+    },
+    {
+      "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
+      "Description": "asdfa",
+      "Title": "Doge",
+      "MRP": "1000",
+      "Discount": "20%",
+      "Price": 801,
+      "id": 2,
+      "type": "Dogs"
+    },
+    {
+      "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
+      "Description": "asdfa",
+      "Title": "Tiger",
+      "MRP": "2000",
+      "Discount": "10%",
+      "Price": 1799,
+      "id": 3,
+      "type": "Cats"
+    },
+    {
+      "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
+      "Description": "temp",
+      "Title": "temp",
+      "MRP": "1222",
+      "Discount": "10%",
+      "Price": 1111,
+      "type": "temp",
+      "id": 4
+    }
+  ],
+  "cartProducts": [
+    {
+      "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
+      "Description": "asdfa",
+      "Title": "Doge",
+      "MRP": "1000",
+      "Discount": "20%",
+      "Price": 801,
+      "type": "Dogs",
+      "Quantity": 4,
+      "productId": 2,
+      "id": 1
+    },
+    {
+      "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
+      "Title": "Shiba Inu",
+      "Price": "802",
+      "MRP": "1001",
+      "Description": "asdfa",
+      "Discount": "20%",
+      "type": "Dogs",
+      "Quantity": 3,
+      "productId": 1,
+      "id": 2
+    },
+    {
+      "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
+      "Description": "temp",
+      "Title": "temp",
+      "MRP": "1222",
+      "Discount": "10%",
+      "Price": 1111,
+      "type": "temp",
+      "Quantity": 1,
+      "productId": 4,
+      "id": 3
+    }
+  ],
+  "OrderedProducts": [
+    {
+      "productId": 1,
+      "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
+      "Title": "Shiba Inu",
+      "Price": "802",
+      "MRP": "1001",
+      "Description": "asdfa",
+      "Discount": "20%",
+      "type": "Dogs",
+      "Quantity": 2,
+      "Status": "Shipped"
+    },
+    {
+      "productId": 1,
+      "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
+      "Title": "Shiba Inu",
+      "Price": "802",
+      "MRP": "1001",
+      "Description": "asdfa",
+      "Discount": "20%",
+      "type": "Dogs",
+      "Quantity": 2,
+      "Status": "Placed"
+    }
+  ],
+  "ReviewProduct": [
+    {
+      "id": 1,
+      "productId": 1,
+      "userId": 1,
+      "Comment": "abcd ebcd",
+      "Ratings": 4
+    },
+    {
+      "id": 2,
+      "productId": 2,
+      "userId": 2,
+      "Comment": "abcd ebcd shgdfg dfghd fdghdgf",
+      "Ratings": 3
+    },
+    {
+      "id": 3,
+      "productId": 2,
+      "userId": 2,
+      "Comment": "abcd ebcd",
+      "Ratings": 4.5
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,54 @@
+<div>
+  <div class="title">
+    Product Listing
+  </div>
+</div>
+<div>
+  <div class="menuProduct">
+    <span class="productName">Product : {{ProductType}}</span>
+    <span class="totalProducts">{{products.length}} items </span>
+    <span class="sortBy"> Sort By :
+      <span>
+        <mat-form-field appearance="fill">
+          <mat-label>Sort By</mat-label>
+          <mat-select [(ngModel)]="selectedValue" (selectionChange)="sortIt()" name="item">
+            <mat-option *ngFor="let item of sortBy" [value]="item.value">
+              {{item.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </span>
+    </span>
+  </div>
+  <div class="Products">
+    <div class="ProductList" *ngFor="let item of products">
+      <span class="Product">
+        <mat-card class="example-card">
+
+          <img class="itemImage" (click)="productClick(item.id)" mat-card-image src={{item.image}} alt="Photo of a Shiba Inu">
+
+          <mat-card-title>{{item.Title}}</mat-card-title>
+          <mat-card-content>
+            <p>
+              {{item.Description}}
+            </p>
+          </mat-card-content>
+          <mat-card-content>
+            <p>
+              MRP <del>{{item.MRP}}</del> <span class="red-color">  {{item.Discount}} OFF</span>
+            </p>
+            <p>
+              {{item.Price}}
+            </p>
+          </mat-card-content>
+          <mat-card-content>
+
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button (click)="addToCart(item)" class="addToCart">Add To Cart</button>
+          </mat-card-actions>
+        </mat-card>
+      </span>
+    </div>
+  </div>
+</div>

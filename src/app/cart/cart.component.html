@@ -1,0 +1,52 @@
+<div>
+    <div class="title">
+        My Cart
+    </div>oiuhbkjhbnjnj
+</div>
+<div class="cartProductList">
+        <div *ngFor="let item of products">
+            <span class="Product" >
+                <mat-card class="example-card">
+                    <div class="item">
+                        <span class="leftContent">
+                            <img class="itemImage" (click)="productClick(item.productId)" mat-card-image src={{item.image}} alt="Photo of a Shiba Inu">
+                        </span>
+                    
+                        <span class="centerContent">
+                            <mat-card-title>{{item.Title}}</mat-card-title>
+                            <mat-card-content>
+                                <p>
+                                    {{item.Description}}
+                                </p>
+                            </mat-card-content>
+                            <mat-card-content>
+                                
+                                
+                                <p>
+                                    Quantity : <input class="QuantityInput" [(ngModel)]="item.Quantity" type="number"/>
+                                </p>
+                            </mat-card-content>
+                        </span>
+                        <span class="rightContent">
+                            <p>
+                                {{item.Price}}
+                            </p>
+                            <p>
+                                <del>{{item.MRP}}</del> <span class="red-color">  {{item.Discount}} OFF</span>
+                            </p>
+                            <p>
+                                Total : {{item.Price * item.Quantity}}
+                            </p>
+                            <p>
+                                <a mat-raised-button class="red-color" (click)="remove(item.id)">Remove</a>
+                            </p>
+                        </span>
+                    </div>
+                  </mat-card>
+                </span>
+            </div>
+            <div class="po">
+                <button mat-raised-button color="accent" [disabled]="placeOrderDisabled" (click)="placeOrder()" class="placeOrder">Place Order</button>
+            </div>
+            
+</div>

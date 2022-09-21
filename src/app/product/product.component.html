@@ -1,0 +1,67 @@
+<div>
+    <div class="title">
+        Product Page
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="table-Product col-md-6">
+            <div class="row">
+                <div class="col-md-9">
+                    <mat-form-field appearance="standard">
+                        <mat-label>Search Product</mat-label>
+                        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Dogs" #input>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                    <button mat-raised-button  (click)="addProduct()" class="addProduct" color="accent">Add Product</button>
+                </div>
+            </div>
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef> id </th>
+                    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="Title">
+                    <th mat-header-cell *matHeaderCellDef> Title </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Title}} </td>
+                </ng-container>
+
+                <!-- Price Column -->
+                <ng-container matColumnDef="Price">
+                    <th mat-header-cell *matHeaderCellDef> Price </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Price}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="MRP">
+                    <th mat-header-cell *matHeaderCellDef> MRP </th>
+                    <td mat-cell *matCellDef="let element"> {{element.MRP}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Edit">
+                    <th mat-header-cell *matHeaderCellDef> </th>
+                    <td mat-cell *matCellDef="let element">
+                        <button mat-stroked-button class="btn" (click)="edit(element)" color="accent">Edit</button>
+                        <button mat-stroked-button class="btn" (click)="delete(element)" color="warn">Delete</button>
+                    </td>
+
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                <!-- Row shown when there is no matching data. -->
+                <tr class="mat-row" *matNoDataRow>
+                    <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

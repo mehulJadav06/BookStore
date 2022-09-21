@@ -1,0 +1,63 @@
+<div class="jumbotron">
+    <header>
+        <h1>
+            Product : {{product.Title}}
+        </h1>
+        <h2>looking for : {{product.type}}</h2>
+    </header>
+    
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <mat-card>
+                <img class="itemImage" mat-card-image src={{product.image}} alt="Product image">
+            </mat-card>
+
+            <mat-card class="description">
+                <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+                    <ngb-panel title={{product.Description}}>
+                      <ng-template ngbPanelContent>
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+                        aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                        craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                        labore sustainable VHS.
+                      </ng-template>
+                    </ngb-panel>
+                    </ngb-accordion>
+            </mat-card>
+            <mat-card class="price">
+                Special Price : <mat-card-content>
+                    <p>
+                      <del>{{product.MRP}}</del> 
+                      <span class="realPrice">
+                        ₹{{product.Price}}
+                      </span>
+                      <span >  {{product.Discount}} OFF</span>
+                    </p>
+                    
+                  </mat-card-content>
+            </mat-card>
+            <mat-card>
+                Ratings : {{ratings}}
+            </mat-card>
+            <mat-card class="Reviews-mat-card">
+                <h1>Reviews from Customers</h1>
+                <mat-card-content  *ngFor="let item of reviews">
+                    <div class="reviews">
+                        <mat-card-content>
+                            {{item.Ratings}} {{map.get(item.id+'')}}
+                        </mat-card-content>
+                        <mat-card-content>
+                            {{item.Comment}}
+                        </mat-card-content>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
